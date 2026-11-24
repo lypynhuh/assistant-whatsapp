@@ -60,6 +60,8 @@ const client = new Client({
             '--disable-accelerated-2d-canvas',
             '--no-first-run',
             '--no-zygote',
+          '--single-process',
+'--disable-features=IsolateOrigins,site-per-process'
             '--disable-gpu'
         ]
     },
