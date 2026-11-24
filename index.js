@@ -51,6 +51,9 @@ async function envoyerMail(destinataire, sujet, texte) {
 
 // --- WHATSAPP ---
 const client = new Client({
+    authStrategy: new LocalAuth(),
+    authTimeoutMs: 120000,
+    qrMaxRetries: 5,
     puppeteer: {
         headless: true,
         args: [
