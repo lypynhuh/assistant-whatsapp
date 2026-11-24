@@ -61,7 +61,7 @@ const client = new Client({
             '--no-first-run',
             '--no-zygote',
           '--single-process',
-'--disable-features=IsolateOrigins,site-per-process'
+'--disable-features=IsolateOrigins,site-per-process',
             '--disable-gpu'
         ]
     },
