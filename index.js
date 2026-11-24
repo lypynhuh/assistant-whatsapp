@@ -56,7 +56,6 @@ const client = new Client({
     qrMaxRetries: 5,
      puppeteer: {
         headless: true,
-        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
         args: [   
             '--no-sandbox',
             '--disable-setuid-sandbox',
@@ -64,8 +63,6 @@ const client = new Client({
             '--disable-accelerated-2d-canvas',
             '--no-first-run',
             '--no-zygote',
-          '--single-process',
-'--disable-features=IsolateOrigins,site-per-process',
             '--disable-gpu'
         ]
     },
