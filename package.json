@@ -1,0 +1,12 @@
+{
+  "name": "assistant-whatsapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "whatsapp-web.js": "latest",
+    "qrcode-terminal": "latest",
+    "openai": "latest",
+    "nodemailer": "latest",
+    "imap": "latest"
+  }
+}
