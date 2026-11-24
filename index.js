@@ -54,21 +54,33 @@ const client = new Client({
     authStrategy: new LocalAuth(),
     authTimeoutMs: 120000,
     qrMaxRetries: 5,
-     puppeteer: {
-        headless: true,
+puppeteer: {
+    headless: 'new',
     executablePath: '/usr/bin/google-chrome-stable',
-        args: [   
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-accelerated-2d-canvas',
-            '--no-first-run',
-            '--no-zygote',
-            '--disable-gpu'
-        ]
-    },
-  });
-
+    args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--disable-accelerated-2d-canvas',
+        '--no-first-run',
+        '--no-zygote',
+        '--single-process',
+        '--disable-extensions',
+        '--disable-background-networking',
+        '--disable-background-timer-throttling',
+        '--disable-backgrounding-occluded-windows',
+        '--disable-breakpad',
+        '--disable-component-extensions-with-background-pages',
+        '--disable-features=TranslateUI',
+        '--disable-ipc-flooding-protection',
+        '--disable-renderer-backgrounding',
+        '--mute-audio',
+        '--no-default-browser-check',
+        '--password-store=basic',
+        '--use-mock-keychain'
+    ]
+} 
 client.on('qr', (qr) => {
   console.log('SCANNE CE QR CODE AVEC WHATSAPP');
   qrcode.generate(qr, { small: true });
