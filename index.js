@@ -54,9 +54,10 @@ const client = new Client({
     authStrategy: new LocalAuth(),
     authTimeoutMs: 120000,
     qrMaxRetries: 5,
-    puppeteer: {
+     puppeteer: {
         headless: true,
-        args: [
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
+        args: [   
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
