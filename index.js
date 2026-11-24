@@ -65,6 +65,7 @@ const client = new Client({
             '--disable-gpu'
         ]
     },
+  });
 
 client.on('qr', (qr) => {
   console.log('SCANNE CE QR CODE AVEC WHATSAPP');
